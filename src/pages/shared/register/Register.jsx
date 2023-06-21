@@ -1,8 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-    const { registerUserWithGmailPass, userUpdateName } = useContext(AuthContext)
+    const { registerUserWithGmailPass, userUpdateName, names } = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleRegisterSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -12,17 +17,32 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        // registerUserWithGmailPass(email, password)
-        //     .then(result => {
-        //         userUpdateName(name)
-        //             .then((result) => { console.log(result.user) })
-        //             .catch(err => console.error(err))
-        //     })
-        //     .catch(err => console.error(err))
-        console.log(name, email, password)
+        registerUserWithGmailPass(email, password)
+            .then(result => {
+                console.log(result.user);
+                userUpdateName(name)
+                    .then((result) => {
+                        toast.success(`🦄 ${firstName} sign up successfully!`, {
+                            position: "top-center",
+                            autoClose: 2000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                        });
+                        navigate("/")
+                    })
+                    .catch(err => console.error(err))
+            })
+            .catch(err => console.error(err))
+
     }
     return (
         <div>
+
+
             <div className="min-w-screen min-h-screen bg-gray-300 flex items-center justify-center px-5 py-5">
                 <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style={{ maxWidth: '1000px' }}>
                     <div className="md:flex w-full">

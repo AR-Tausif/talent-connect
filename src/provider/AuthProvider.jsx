@@ -8,6 +8,7 @@ const auth = getAuth(app)
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(false)
+    const [names, setNames] = useState("tausif")
     const googleProvider = new GoogleAuthProvider();
     const registerUserWithGoogleId = () => {
         setLoading(true);
@@ -43,6 +44,8 @@ const AuthProvider = ({ children }) => {
         userLoggedOut,
         userUpdateName,
         user,
+        names,
+
     }
     return (
         <AuthContext.Provider value={provideContexts}>

@@ -121,7 +121,7 @@ const Navbar = () => {
                                                     </div>
                                                 </li>
                                             </a>
-                                            <a className="cursor-pointer">
+                                            <NavLink to="/jobs" className="cursor-pointer">
                                                 <li className="text-gray-800 pt-8">
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center">
@@ -135,7 +135,7 @@ const Navbar = () => {
                                                         </div>
                                                     </div>
                                                 </li>
-                                            </a>
+                                            </NavLink>
                                             <a className="cursor-pointer">
                                                 <li className="text-gray-800 pt-8">
                                                     <div className="flex items-center">
@@ -306,7 +306,7 @@ const NavLinksLg = () => {
                 </span>
                 Dashboard
             </a>
-            <a href="" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+            <NavLink to="/jobs" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                 <span className="mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" />
@@ -314,7 +314,7 @@ const NavLinksLg = () => {
                     </svg>
                 </span>
                 Products
-            </a>
+            </NavLink>
             <a href="" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                 <span className="mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-compass" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
