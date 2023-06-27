@@ -1,9 +1,12 @@
+import AddJobHomeBox from "./addJobHomeBox/AddJobHomeBox";
+
 const AddJob = () => {
+	const dummyText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro neque architecto minus quasi modi numquam impedit, possimus, et ipsam perferendis exercitationem earum odio dolorem itaque libero perspiciatis esse quam consequatur fuga consectetur placeat aliquid illum ipsa? Vero totam dolores culpa perspiciatis sed porro laborum tempora quas, provident molestias quis, ut aliquid iure minus impedit odit non voluptatibus eligendi commodi dolorem, cupiditate ipsam eaque alias voluptas?`
 	return (
-		<div className="p-7">
-			<div className="space-y-2 text-center ">
+		<div className="p-10 space-y-10">
+			<div className="space-y-2 ">
 				<h3 className="text-4xl">Post a New Job!</h3>
-				<div className="text-2xl">Ready to jump back in?</div>
+				<div className="text-xl">Ready to jump back in?</div>
 			</div>
 			{/* <div className="flex flex-wrap ">
 				<div className="lg:w-full pr-4 pl-4">
@@ -293,33 +296,176 @@ const AddJob = () => {
 						</div>
 					</div></div>
 			</div> */}
-			<div className="p-20">
-				<div className="post-job-steps">
-					<div className="step">
-						<span className="icon flaticon-briefcase" />
-						<h5>Job Detail</h5>
-					</div>
-					<div className="step">
-						<span className="icon flaticon-money" />
-						<h5>Package &amp; Payments</h5>
-					</div>
-					<div className="step">
-						<span className="icon flaticon-checked" />
-						<h5>Confirmation</h5>
-					</div>
-				</div>
-				<div className="flex flex-wrap">
-					<form action="">
-						<div>
-							<label htmlFor="Company Name">Company Name</label> <br />
-							<input
-								type="text"
-								className="border my-3"
-								name="company_name"
-								id=""
-								placeholder="company_name" />
+			<div className="space-y-10 bg-white rounded-lg p-12">
+				<AddJobHomeBox />
+				<div className="">
+					<form action="" className="space-y-8">
+						<div className="">
+							<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job Title</label>
+							<div className="relative w-full">
+								<input type="text" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+									placeholder="Title"
+								/>
+							</div>
+						</div>
+						<div className="">
+
+							<label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job Description</label>
+							<textarea id="message" name="job_desc" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave your job description..."></textarea>
+
+						</div>
+						<div className="grid grid-cols-2 gap-7">
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+								<div className="relative w-full">
+									<div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+										<svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+									</div>
+									<input type="text" name="job_desc" className="pl-10 mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Email"
+									/>
+								</div>
+							</div>
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company Name</label>
+								<div className="relative w-full">
+
+									<input type="text" name="company_name" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Company Name"
+									/>
+								</div>
+							</div>
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Skills</label>
+								<div className="relative w-full">
+
+									<input type="text" name="skills_box" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Skills"
+									/>
+								</div>
+							</div>
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job Type</label>
+								<div className="relative w-full">
+
+									<input type="text" name="job_type" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Job Type"
+									/>
+								</div>
+							</div>
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Offered Sallary</label>
+								<div className="relative w-full">
+
+									<input type="text" name="offered_salary" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Offered Sallary"
+									/>
+								</div>
+							</div>
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Vacancy</label>
+								<div className="relative w-full">
+
+									<input type="text" name="vacancy" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Vacancy"
+									/>
+								</div>
+							</div>
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Experience</label>
+								<div className="relative w-full">
+
+									<input type="text" name="experience" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Experience"
+									/>
+								</div>
+							</div>
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+								<div className="relative w-full">
+
+									<input type="text" name="category" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Category"
+									/>
+								</div>
+							</div>
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Qualifications</label>
+								<div className="relative w-full">
+
+									<input type="text" name="qualifications" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Qualifications"
+									/>
+								</div>
+							</div>
+							<div className="">
+								<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deadline date</label>
+								<div className="relative w-full">
+
+									<input type="text" name="deadline_date" className="pl-10 mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+										placeholder="Deadline date"
+									/>
+								</div>
+							</div>
+						</div>
+						<div className="">
+							<label htmlFor="email-address-icon" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Coplete Address</label>
+							<div className="relative w-full">
+								<input type="text" name="address_full" className="mt-1 block w-full px-3 py-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+								invalid:border-pink-500 invalid:text-pink-600
+								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+									placeholder="Address"
+								/>
+							</div>
 						</div>
 					</form>
+					<button>Post Job</button>
 				</div>
 			</div>
 		</div>
