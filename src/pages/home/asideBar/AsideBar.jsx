@@ -1,4 +1,4 @@
-import Job from "../../../components/shared/jobs/Job";
+import Job from "../job/Job";
 
 const AsideBar = () => {
     return (
