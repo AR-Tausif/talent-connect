@@ -7,6 +7,7 @@ const Main = () => {
     return (
         <div>
             <Navbar />
+            Hi there im little bit a vs code
             <Outlet />
             <Footer />
         </div>
